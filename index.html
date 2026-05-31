@@ -1393,6 +1393,171 @@ h2 {
 
 /* ═══ END WORLD-CLASS UPGRADE ═══ */
 
+
+/* ═══ FINAL TOUCH — PROFESSOR GRADE ════════════════════ */
+
+/* html base */
+html {
+  scroll-padding-top: 74px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* text-wrap on all headings */
+h1, h2, h3, h4 { text-wrap: balance; }
+p { text-wrap: pretty; }
+
+/* Gold form caret and accent */
+:root { accent-color: #d4af37; }
+input, textarea { caret-color: #d4af37; }
+
+/* iPhone safe area */
+.wa-float {
+  bottom: calc(20px + env(safe-area-inset-bottom)) !important;
+}
+
+/* Contact list items — was missing CSS */
+.cl-item {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  font-size: .92rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.cl-item:last-child { border-bottom: none; }
+.cl-item strong {
+  display: block;
+  color: var(--gold2);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+/* Gallery caption — was missing CSS */
+.gcap {
+  padding: 16px 18px;
+}
+.gcap strong {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.gcap span {
+  font-size: .86rem;
+  color: var(--muted);
+  line-height: 1.60;
+}
+
+/* YT wrap aspect ratio fix */
+.yt-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+.yt-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Testimonials */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.testi-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 24px 20px;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.testi-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,175,55,.22);
+}
+.testi-stars { color: var(--gold2); font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
+.testi-text {
+  font-style: italic;
+  color: rgba(233,238,248,.82);
+  font-size: .92rem;
+  line-height: 1.72;
+  margin-bottom: 16px;
+}
+.testi-author { display: flex; align-items: center; gap: 10px; }
+.testi-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--cyan));
+  display: grid; place-items: center;
+  font-weight: 900; color: #08111f;
+  font-size: .9rem; flex-shrink: 0;
+}
+.testi-name { font-weight: 700; font-size: .88rem; color: #fff; }
+.testi-role { font-size: .78rem; color: var(--muted); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.faq-item[open] { border-color: rgba(212,175,55,.22); }
+.faq-item summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .96rem;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: var(--gold2);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-answer {
+  padding: 0 22px 18px;
+  color: var(--muted);
+  font-size: .93rem;
+  line-height: 1.75;
+}
+
+/* Footer links */
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+  font-size: .86rem;
+}
+.footer-links-row a { color: var(--muted); transition: color .2s; }
+.footer-links-row a:hover { color: var(--gold2); }
+
+@media (max-width: 600px) {
+  .testi-grid { grid-template-columns: 1fr; }
+}
+
+
+  
   </style>
 </head>
 <body>
@@ -1493,6 +1658,16 @@ h2 {
       <div class="stat"><strong>CEO</strong><span>Corporate Ready</span></div>
     </div>
   </section>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><strong>1000+</strong><span>Patients Helped</span></div>
+    <div class="stat"><strong>80K+</strong><span>YouTube Subscribers</span></div>
+    <div class="stat"><strong>250K+</strong><span>Facebook Followers</span></div>
+    <div class="stat"><strong>12+</strong><span>Workshop Programs</span></div>
+  </div>
+</section>
+  
 
   <section class="section" id="about">
     <div class="wrap">
@@ -1659,6 +1834,86 @@ h2 {
     </div>
   </section>
 
+  <section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-tag">What Clients Say</div>
+    <h2>Trusted by 1000+ Across India</h2>
+    <p class="lead">Real feedback from corporate teams, hospitals, colleges and individual clients.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The emotional intelligence workshop completely changed how our HR team communicates. D. Durga's combination of psychology and practical training is something we couldn't find anywhere else in Chennai."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Ramesh K.</div>
+            <div class="testi-role">HR Manager · IT Company, Chennai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"D. Durga's nurse psychology workshop was outstanding. Our staff's empathy and patient communication improved dramatically. Evidence-based, practical, and highly engaging for healthcare workers."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Dr. Priya S.</div>
+            <div class="testi-role">Hospital Matron · Private Hospital, Chennai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The parenting workshop helped me understand my teenage son completely. D. Durga explains brain development and emotional intelligence in a way every parent can understand. Life-changing session."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Meena T.</div>
+            <div class="testi-role">Parent · T Nagar, Chennai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-tag">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What makes D. Durga different from other soft skills trainers?</summary>
+        <div class="faq-answer">D. Durga holds five degrees — DPN, DAHM, BBA, MBA, and MSW in Medical &amp; Psychiatry. No other soft skills trainer in Tamil Nadu combines clinical psychology, HR management, hospital administration, and marketing. Every workshop is evidence-based and psychologically grounded.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are workshops available online for clients outside Chennai?</summary>
+        <div class="faq-answer">Yes. All programs are available online via Zoom or Google Meet — for individuals, corporate teams, hospitals, and colleges across India and for NRI clients internationally. Tamil and English sessions available.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can you conduct workshops at our hospital or college?</summary>
+        <div class="faq-answer">Absolutely. On-site workshops are available across Tamil Nadu for hospitals, nursing colleges, engineering colleges, corporate offices, and institutions. Programs are customised for your specific audience — from 10 to 500+ participants.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I register for a workshop or training?</summary>
+        <div class="faq-answer">WhatsApp us at +91 73959 44527 or call +91 93422 65841. We respond within a few hours and can often arrange same-day appointments for individual sessions.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the AI wellness platform?</summary>
+        <div class="faq-answer">Durga MindSkillsCare has developed an AI-powered platform with free online self-assessments for anxiety, depression, stress, and emotional intelligence — available at durga-mindskillscare.pages.dev. These tools extend D. Durga's expertise digitally to thousands of users.</div>
+      </details>
+    </div>
+  </div>
+  </section>
+
   <section class="section" id="social">
     <div class="wrap">
       <div class="section-tag">Social Media Hub</div>
@@ -1734,6 +1989,27 @@ h2 {
   </section>
 
 </main>
+
+  <footer class="footer">
+  <div class="wrap" style="text-align:center; padding: 36px 0 56px;">
+    <strong>Durga SoftSkills Academy</strong>
+    <p style="margin-top:10px; color:var(--muted); line-height:1.75; font-size:.9rem;">
+      AI Era Soft Skills Training Chennai · Emotional Intelligence Workshops India<br>
+      Corporate Training · Parenting Workshops · Nurse &amp; Caregiver Psychology · AI Platform<br>
+      Old No.14, New No.29, Srinivasa Nagar, T Nagar, Chennai – 600017
+    </p>
+    <div class="footer-links-row">
+      <a href="https://durga-mindskillscare.pages.dev" target="_blank" rel="noopener">Main Website</a>
+      <a href="https://www.youtube.com/@DurgaMindSkillsCare" target="_blank" rel="noopener">YouTube 80K+</a>
+      <a href="https://www.facebook.com/DurgaCounselingCentre" target="_blank" rel="noopener">Facebook 250K+</a>
+      <a href="https://www.instagram.com/durgamindskillscare" target="_blank" rel="noopener">Instagram 40K+</a>
+      <a href="https://wa.me/917395944527" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p style="margin-top:16px; color:rgba(233,238,248,.28); font-size:.78rem;">
+      © 2026 Durga SoftSkills Academy · +91 73959 44527 · +91 93422 65841
+    </p>
+  </div>
+  </footer>
 
 <footer class="footer">
   <div class="wrap">
