@@ -622,7 +622,9 @@
     padding:10px 16px;
     font-size:.9rem;
 }
-
+.nav-cta{
+    display:none !important;
+}
   .social-ticker{
   background:linear-gradient(90deg,#d4af37,#f5e6a1,#d4af37);
   color:#111;
@@ -643,6 +645,22 @@
   0%{transform:translateX(0);}
   100%{transform:translateX(-100%);}
   }
+
+.brand-mark{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid rgba(212,175,55,.7);
+    flex-shrink:0;
+}
+
+.brand-mark img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
     
   </style>
 </head>
@@ -673,7 +691,9 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="brand">
-      <div class="brand-mark">D</div>
+      <div class="brand-mark">
+  <img src="durga.jpg" alt="D. Durga">
+</div>
       <div class="brand-text">
         <strong>Durga SoftSkills Academy</strong>
         <span>AI Era Soft Skills • Emotional Intelligence</span>
