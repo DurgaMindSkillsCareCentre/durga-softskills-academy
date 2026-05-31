@@ -623,12 +623,53 @@
     font-size:.9rem;
 }
 
-  
+  .social-ticker{
+  background:linear-gradient(90deg,#d4af37,#f5e6a1,#d4af37);
+  color:#111;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:10px 0;
+  font-weight:700;
+  font-size:14px;
+}
+
+.ticker-track{
+  display:inline-block;
+  padding-left:100%;
+  animation:ticker 30s linear infinite;
+}
+
+@keyframes ticker{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-100%);}
+  }
     
   </style>
 </head>
 <body>
 
+
+<!-- SOCIAL TICKER START -->
+<div class="social-ticker">
+  <div class="ticker-track">
+    ⭐ Emotional Intelligence Workshops •
+    🎓 Soft Skills Training Chennai •
+    🤖 AI Era Skills Development •
+    👨‍👩‍👧 Parenting & Student Wellness Programs •
+    🏥 Healthcare & Nursing Training •
+    🏢 Corporate Training Programs •
+    🎤 Expert Speaker D. Durga •
+    🌐 durga-mindskillscare.pages.dev •
+    📱 WhatsApp Consultation Available •
+    ⭐ Emotional Intelligence Workshops •
+    🎓 Soft Skills Training Chennai •
+    🤖 AI Era Skills Development •
+  </div>
+</div>
+<!-- SOCIAL TICKER END -->
+
+<header class="nav">
+  
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="brand">
