@@ -724,7 +724,72 @@
 }
 
 
-    
+/* PREMIUM 3D EFFECT */
+
+/* Header */
+.nav{
+  background:linear-gradient(180deg,#07172f 0%,#031022 100%) !important;
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* All cards */
+.card,
+.gcard,
+.service-card,
+.stat-card{
+  background:linear-gradient(
+    180deg,
+    rgba(13,28,54,.96) 0%,
+    rgba(7,18,38,.98) 100%
+  ) !important;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.35),
+    0 2px 8px rgba(255,215,90,.08),
+    inset 0 1px 0 rgba(255,255,255,.06);
+
+  transition:all .3s ease;
+}
+
+/* Slight lift on touch/hover */
+.card:hover,
+.gcard:hover,
+.service-card:hover,
+.stat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45),
+    0 0 25px rgba(230,195,80,.12);
+}
+
+/* Gallery photos */
+.gcard img{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 8px 20px rgba(0,0,0,.25);
+}
+
+/* Gold number blocks */
+.badge,
+.num,
+.icon-box{
+  box-shadow:
+    0 10px 20px rgba(230,195,80,.25),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* Profile image */
+.brand-mark img{
+  box-shadow:
+    0 0 25px rgba(230,195,80,.30),
+    0 0 50px rgba(230,195,80,.12);
+}
+
+  
     
   </style>
 </head>
