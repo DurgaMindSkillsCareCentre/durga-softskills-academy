@@ -678,12 +678,54 @@
   color:#f7e3a1;
         }
 
-.gallery-card img{
-  width:100%;
-  height:auto;
-  display:block;
+
+/* FORCE PORTRAIT PHOTOS TO SHOW FULLY */
+
+.gcard{
+  overflow:hidden !important;
 }
-            
+
+.gcard img{
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  min-height:unset !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  display:block !important;
+  aspect-ratio:auto !important;
+}
+
+/* Override any gallery/grid image rules */
+
+.gallery img,
+.gallery-grid img,
+.gmedia img,
+.grid img,
+.card img{
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  aspect-ratio:auto !important;
+}
+
+
+.gcard{
+  height:auto !important;
+  min-height:unset !important;
+  max-height:none !important;
+}
+
+.gcard picture,
+.gcard figure{
+  height:auto !important;
+  max-height:none !important;
+}
+
+
+    
+    
   </style>
 </head>
 <body>
